@@ -3,7 +3,7 @@ import React from "react";
 import Card from "./Card";
 import ShopHero from "./ShopHero";
 import coffee_products from "../../products/products";
-
+import ShopSidebar from "./ShopSidebar";
 
 const Shop = (props) => {
 
@@ -24,11 +24,13 @@ const Shop = (props) => {
 
     return (
         <div className="shop-wrapper"> 
-        <ShopHero />
-            <div className="product-cards-wrapper">
-                {product_cards}
-            </div>
-            
+            <ShopHero />
+            <div className="shop-wrapper-lower">
+                <ShopSidebar />
+                <div className="product-cards-wrapper">
+                        {product_cards}
+                </div>
+            </div> 
         </div>
     )
 }

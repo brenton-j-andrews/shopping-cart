@@ -59,6 +59,7 @@ html, body {
   --light-primary-text: #545b5a;
   --light-primary-text-hover: #424242;
   --light-secondary-background: hsl(200, 14%, 78%);
+  --light-banner-gray: #696969;
 }
 
 @font-face {
@@ -91,6 +92,19 @@ html, body {
   background-color: var(--light-primary-background);
   width: min(100%, 1068px);
   margin-bottom: 50px;
+}
+
+.nav-bar-free-shipping {
+  width: 100vw;
+  text-align: center;
+  font-size: 14px;
+  font-weight: bolder;
+
+  background-color: var(--light-banner-gray);
+  color: white;
+
+  padding: 15px 0px 15px 0px;
+  margin-bottom: 15px;
 }
 
 .nav-bar-upper {
@@ -140,26 +154,38 @@ html, body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
-  background-color: lime;
-}
-
-.shop-hero {
   width: 90%;
 }
 
-.shop-hero-header {
-  font-size: 24px;
+.shop-hero {
+  text-align: left;
+  width: 100%;
+  margin-bottom: 25px;
+  border-bottom: 5px solid var(--light-banner-gray);
 }
 
-.shop-hero image {
-  width: 80%;
+.shop-header {
+  font-size: 32px;
+  font-weight: bolder;
+  margin-bottom: 10px;
+}
+
+
+
+.shop-wrapper-lower {
+  display: flex;
+}
+
+.shop-sidebar {
+  width: 15%;
 }
 
 .product-cards-wrapper {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+
+  width: 85%;
 }
 
 .product-card,
