@@ -1,3 +1,5 @@
+// Product card component for the shopping pages.
+
 import React from "react";
 
 

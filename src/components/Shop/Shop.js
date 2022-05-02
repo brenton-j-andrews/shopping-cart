@@ -15,7 +15,7 @@ const Shop = (props) => {
         roaster={coffee.roaster}
         name={coffee.name}
         image_src={coffee.image}
-        price = {coffee.price}
+        price = {Number(coffee.price)}
         roast = {coffee.roast}
         singleOrigin =  {coffee.singleOrigin}
         pourOver = {coffee.pourOver}
