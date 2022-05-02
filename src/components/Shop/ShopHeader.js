@@ -1,6 +1,6 @@
 import React from "react";
 
-const ShopHero = () => {
+const ShopHeader = () => {
     return (
         <div className="shop-hero">
             <p className="shop-header"> Shop Our Coffees </p>
@@ -8,4 +8,4 @@ const ShopHero = () => {
     )
 }
 
-export default ShopHero;
+export default ShopHeader;

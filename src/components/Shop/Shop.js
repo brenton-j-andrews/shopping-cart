@@ -1,16 +1,17 @@
 import React from "react";
 
-import Card from "./Card";
-import ShopHero from "./ShopHero";
 import coffee_products from "../../products/products";
+
+import Card from "./Card";
 import ShopSidebar from "./ShopSidebar";
 
 const Shop = (props) => {
 
+
     let product_cards = coffee_products.map((coffee) => (
         
         <Card 
-        key={coffee.id}
+        id={coffee.id}
         roaster={coffee.roaster}
         name={coffee.name}
         image_src={coffee.image}
@@ -19,12 +20,17 @@ const Shop = (props) => {
         singleOrigin =  {coffee.singleOrigin}
         pourOver = {coffee.pourOver}
         espresso = {coffee.espresso}
+        addToCart = {props.addToCart}
         />
     ))
 
     return (
         <div className="shop-wrapper"> 
-            <ShopHero />
+
+            <div className="shop-header-wrapper">
+                <p className="shop-header"> Shop Our Coffees </p>
+            </div>
+
             <div className="shop-wrapper-lower">
                 <ShopSidebar />
                 <div className="product-cards-wrapper">

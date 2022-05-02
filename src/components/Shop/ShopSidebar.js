@@ -1,22 +1,57 @@
-import React from "react";
+import React, { useState } from "react";
 
-import { sideBarItems } from "./sideBarItems";
 
-const ShopSidebar = () => {
+const ShopSidebar = (props) => {
     return (
-        <nav className="side-bar">
-            <ul className="side-bar-options">
+        <NavBar>
+            <NavItem text="Roast"> 
+                <DropdownMenu />
+            </NavItem>
+            <NavItem text="Specialty" />
+            <NavItem text="Brew Method" />
+        </NavBar>
+    )
+}
 
-                { sideBarItems.map(( option, index) => {
-                    return (
-                        <li className="side-bar-items" key={ index }>
-                            <a href="/#" > {option.title} </a>
-                        </li>
-                    )})
-                }
-            </ul>
-
+function NavBar(props) {
+    return (
+        <nav className="shop-nav-bar">
+            <ul className="navbar-nav"> { props.children } </ul>
         </nav>
+    )
+}
+
+function NavItem(props) {
+    const [ open, setOpen ] = useState(false);
+
+    return (
+        <li className="nav-item">
+            <p className="nav-button" onClick={() => {setOpen(!open)}}>
+                {props.text}
+            </p>
+
+            {open && props.children}
+        </li>
+        
+        
+    )
+}
+
+function DropdownMenu() {
+    function DropdownItem(props) {
+        return (
+            <a href="/#" className="shop-nav-menu-item">
+                { props.children }
+            </a>
+        )
+    }
+
+    return (
+        <div className="shop-dropdown">
+            <DropdownItem> Light </DropdownItem>
+            <DropdownItem> Medium </DropdownItem>
+            <DropdownItem> Dark </DropdownItem>
+        </div>
     )
 }
 

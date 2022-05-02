@@ -77,8 +77,7 @@ html, body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: min(100%, 1068px);
-
+  width: min(100%, 1080px);
   background-color: var(--light-primary-background);
 }
 
@@ -90,7 +89,7 @@ html, body {
   align-items: center;
 
   background-color: var(--light-primary-background);
-  width: min(100%, 1068px);
+  width: min(100%, 1080px);
   margin-bottom: 50px;
 }
 
@@ -147,7 +146,7 @@ html, body {
   background-color: var(--light-secondary-background);
 }
 
-/* Shop Page Styling || */
+/* Shop Page and Cart Page Styling || */
 
 .shop-wrapper {
   display: flex;
@@ -157,26 +156,26 @@ html, body {
   width: 90%;
 }
 
-.shop-hero {
+.shop-header-wrapper,
+.cart-header-wrapper {
   text-align: left;
   width: 100%;
   margin-bottom: 25px;
   border-bottom: 5px solid var(--light-banner-gray);
 }
 
-.shop-header {
+.shop-header,
+.cart-header {
   font-size: 32px;
   font-weight: bolder;
   margin-bottom: 10px;
 }
 
-
-
 .shop-wrapper-lower {
   display: flex;
 }
 
-.shop-sidebar {
+.shop-nav-bar {
   width: 15%;
 }
 
@@ -186,21 +185,28 @@ html, body {
   justify-content: center;
 
   width: 85%;
+  background-color: white;
 }
 
 .product-card,
 .product-card-info {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content:flex-end;
   align-items: center;
 }
 
 .product-card {
-  border: 3px solid black;
-  border-radius: 15px;
+  border: 3px solid lightgray;
+  text-align: center;
+  border-radius: 5%;
   margin: 10px;
   padding: 10px;
+  width: 25%;
+}
+
+.product-card:hover {
+  box-shadow: 10px 5px 5px lightgray;
 }
 
 .product-card-image {
@@ -211,3 +217,65 @@ html, body {
   background-color: white;
 }
 
+.product-brand,
+.product-name {
+  font-weight: bolder;
+  margin-bottom: 5px;
+}
+
+.product-price {
+  font-weight: bolder;
+  font-size: 18px;
+  margin-top: 5px;
+}
+
+.product-cart-button {
+  width: 100%;
+  margin-top: 10px;
+}
+
+/* Dropdown Menu Styling */
+.shop-dropdown {
+  position: absolute;
+  left: 55px;
+  width: 150px;
+  background-color: white;
+}
+
+.shop-nav-menu-item {
+    display: flex;
+    align-items: center;
+    padding: 5px;
+}
+
+.shop-nav-menu-item:hover {
+  filter: none;
+  color: blue;
+}
+
+/* Cart Page Styling || */
+.cart-page-wrapper {
+  width: 90%;
+}
+
+.cart-wrapper {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+
+.cart-summary,
+.order-summary {
+  display: flex;
+  flex-direction: column;
+}
+
+.cart-summary {
+  width: 60%;
+  background-color: green;
+}
+
+.order-summary {
+  width: 40%;
+  background-color: red;
+}
