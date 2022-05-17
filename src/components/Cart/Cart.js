@@ -6,8 +6,6 @@ const Cart = (props) => {
 
     let item_count = props.item_count;
 
-    console.log(item_count);
-
     // Parse cart prop to render cart contents as JSX.
     function cartContents() {
         let cart_contents;
@@ -42,6 +40,7 @@ const Cart = (props) => {
                 <p> { name }</p>
                 <p> {"$" + price } </p>
                 <p> { quantity } </p>
+                <button className="remove_btn" onClick={() => props.removeFromCart(id)}> Remove </button>
             </div>
         }
         
@@ -49,12 +48,24 @@ const Cart = (props) => {
         return cart_contents;
     }
 
+    // Calculate order subtotal amount.
+    function productsTotal() {
+        let products_total = 0;
 
+        for (let i = 0; i < props.cart.length; i++) {
+            if (props.cart[i].quantity !== 0) {
+                products_total += props.cart[i].price * props.cart[i].quantity;
+            }
+            
+        }
+        return products_total;
+    }
+ 
     // Return JSX for order summary section.
     function orderSummary() {
         let order_summary;
         let shipping_banner;
-        let products_total = item_count;
+        let products_total = productsTotal(item_count);
         let tax_total = Math.round(products_total * .03 * 100) / 100;
         let shipping_total = (products_total >= 50) ? 0 : 6;
         let order_total = Math.round((products_total + tax_total + shipping_total) * 100) / 100;
@@ -74,12 +85,12 @@ const Cart = (props) => {
                     <tbody>
                         <tr>
                             <td>Subtotal</td>
-                            <td>{products_total}</td>
+                            <td>${products_total}</td>
                         </tr>
 
                         <tr>
                             <td>Tax</td>
-                            <td>{tax_total}</td>
+                            <td>${tax_total}</td>
                         </tr>
 
                         <tr>
@@ -89,7 +100,7 @@ const Cart = (props) => {
 
                         <tr>
                             <td>Order Total</td>
-                            <td>{order_total}</td>
+                            <td>${order_total}</td>
                         </tr>
                     </tbody>
                 </table>

@@ -21,6 +21,7 @@ class App extends React.Component {
     }
 
     this.addToCart = this.addToCart.bind(this);
+    this.removeFromCart = this.removeFromCart.bind(this);
   }
 
   // Add new item to the cart / update quantity of item in the cart already.
@@ -39,6 +40,21 @@ class App extends React.Component {
     })
   }
   
+  // Remove an item from the cart.
+  removeFromCart(id) {
+    let index =  this.state.cart.findIndex(product => product.id === id);
+    let copy_cart = [...this.state.cart];
+  
+    let item = {...copy_cart[index]}
+    let copy_quantity = item.quantity;
+    item.quantity = 0;
+    copy_cart[index] = item;
+
+    this.setState({
+      cart : copy_cart,
+      item_count : this.state.item_count - copy_quantity
+    })
+  }
 
 
   render() {
@@ -50,7 +66,7 @@ class App extends React.Component {
           <Routes>
             <Route path="/" element= { <Homepage /> }></Route>
             <Route path="/shopping" element = { <Shop addToCart = {this.addToCart} /> }></Route>
-            <Route path="/cart" element = { <Cart cart = {this.state.cart} item_count = {this.state.item_count} />}></Route> 
+            <Route path="/cart" element = { <Cart cart = {this.state.cart} item_count = {this.state.item_count} removeFromCart = {this.removeFromCart} />}></Route> 
           </Routes>
         </BrowserRouter>
       </div>
