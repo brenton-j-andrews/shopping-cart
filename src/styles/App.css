@@ -279,3 +279,26 @@ html, body {
   width: 40%;
   background-color: red;
 }
+
+/* Cart card styling || */
+.cart-card {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  padding: 5px;
+  margin: 10px;
+  background-color: grey;
+}
+
+.cart-card-left {
+  display: flex;
+  flex-direction: column;
+}
+
+.cart-card-quantity {
+  display: flex;
+  align-items: center;
+  background-color: red;
+  padding: 5px;
+}

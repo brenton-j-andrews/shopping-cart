@@ -22,6 +22,7 @@ class App extends React.Component {
 
     this.addToCart = this.addToCart.bind(this);
     this.removeFromCart = this.removeFromCart.bind(this);
+    this.incrementCartItem = this.incrementCartItem.bind(this);
   }
 
   // Add new item to the cart / update quantity of item in the cart already.
@@ -56,6 +57,28 @@ class App extends React.Component {
     })
   }
 
+  // Increment item quantity in the cart.
+  incrementCartItem(id, symbol) {
+    let index =  this.state.cart.findIndex(product => product.id === id);
+    let item_count_inc;
+    let copy_cart = [...this.state.cart];
+    let item = {...copy_cart[index]}
+    copy_cart[index] = item;
+
+    if (symbol === "+") {
+      item.quantity++;
+      item_count_inc = 1
+    } else {
+      item.quantity--;
+      item_count_inc = -1
+    }
+
+    this.setState({
+      cart : copy_cart,
+      item_count : this.state.item_count + item_count_inc
+    })
+  }
+
 
   render() {
     
@@ -66,7 +89,7 @@ class App extends React.Component {
           <Routes>
             <Route path="/" element= { <Homepage /> }></Route>
             <Route path="/shopping" element = { <Shop addToCart = {this.addToCart} /> }></Route>
-            <Route path="/cart" element = { <Cart cart = {this.state.cart} item_count = {this.state.item_count} removeFromCart = {this.removeFromCart} />}></Route> 
+            <Route path="/cart" element = { <Cart cart = {this.state.cart} item_count = {this.state.item_count} removeFromCart = {this.removeFromCart } incrementCartItem = {this.incrementCartItem} />}></Route> 
           </Routes>
         </BrowserRouter>
       </div>

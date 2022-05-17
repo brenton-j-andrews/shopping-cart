@@ -35,15 +35,26 @@ const Cart = (props) => {
             cart_contents = 
 
             <div key={id} className="cart-card">
-                <p> { img } </p>
-                <p> { roaster }</p>
-                <p> { name }</p>
-                <p> {"$" + price } </p>
-                <p> { quantity } </p>
+                <div className="cart-card-left">
+                    <p> { img } </p>
+                    <p> { roaster }</p>
+                    <p> { name }</p>
+                    <p> {"$" + price } </p>
+                </div>
+                
+                <div className="cart-card-quantity">
+                    <button className="remove_btn" onClick={() => props.incrementCartItem(id, "-")}> - </button>
+                    <p> { quantity } </p>
+                    <button className="remove_btn" onClick={() => props.incrementCartItem(id, "+")}> + </button>
+                </div>
+                
                 <button className="remove_btn" onClick={() => props.removeFromCart(id)}> Remove </button>
+                
+
             </div>
         }
-        
+
+
 
         return cart_contents;
     }
