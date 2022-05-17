@@ -21,6 +21,7 @@ let coffee_products = [
     
     {
         id: 1,
+        quantity: 0,
         roaster: "Tony's Coffee",
         name: "Sugar Bee Espresso",
         image: espresso1,
@@ -33,6 +34,7 @@ let coffee_products = [
 
     {
         id: 2,
+        quantity: 0,
         roaster: "Victrola Coffee",
         name: "Tribourough Espresso",
         image: espresso2,
@@ -45,6 +47,7 @@ let coffee_products = [
 
     {
         id: 3,
+        quantity: 0,
         roaster: "Dogwood Coffee",
         name: "Bear Hug Espresso",
         image: espresso3,
@@ -57,6 +60,7 @@ let coffee_products = [
 
     {
         id: 4,
+        quantity: 0,
         roaster: "Olympia Coffee Roasting",
         name: "Big Truck Espresso",
         image: espresso4,
@@ -69,6 +73,7 @@ let coffee_products = [
 
     {
         id: 5,
+        quantity: 0,
         roaster: "Camber Coffee",
         name: "Dailed In Espresso",
         image: espresso5,
@@ -80,6 +85,7 @@ let coffee_products = [
 
     {
         id: 6,
+        quantity: 0,
         roaster: "Middle Fork Roasters",
         name: "Full City Espresso",
         image: espresso6,
@@ -92,6 +98,7 @@ let coffee_products = [
 
     {
         id: 7,
+        quantity: 0,
         roaster: "Olympia Coffee",
         name: "Peru Espiritu Cusco",
         image: single_origin1,
@@ -104,6 +111,7 @@ let coffee_products = [
 
     {
         id: 8,
+        quantity: 0,
         roaster: "Wonderstate Coffee",
         name: "Comlombia Fondo Paez",
         image: single_origin2,
@@ -116,6 +124,7 @@ let coffee_products = [
 
     {
         id: 9,
+        quantity: 0,
         roaster: "Boost Coffee Co.",
         name: "Guatemala Cimarron Light",
         image: single_origin3,
@@ -128,6 +137,7 @@ let coffee_products = [
 
     {
         id: 10,
+        quantity: 0,
         roaster: "Wonderstate Coffee",
         name: "Comlombia Fondo Paez",
         image: single_origin4,
@@ -140,6 +150,7 @@ let coffee_products = [
 
     {
         id: 11,
+        quantity: 0,
         roaster: "Venton's Coffee",
         name: "Mexico Nayarita",
         image: single_origin5,
@@ -152,6 +163,7 @@ let coffee_products = [
 
     {
         id: 12,
+        quantity: 0,
         roaster: "Bluebeard Coffee Roasters",
         name: "Colombua Los Guacharos",
         image: single_origin6,
@@ -164,6 +176,7 @@ let coffee_products = [
 
     {
         id: 13,
+        quantity: 0,
         roaster: "Methodical Coffee",
         name: "Brazil Dulce Signature",
         image: single_origin7,
@@ -176,6 +189,7 @@ let coffee_products = [
 
     {
         id: 14,
+        quantity: 0,
         roaster: "Tony's Coffee",
         name: "Kenya Kiunyu",
         image: single_origin8,
@@ -188,6 +202,7 @@ let coffee_products = [
 
     {
         id: 15,
+        quantity: 0,
         roaster: "Brandywine Coffee Roasters",
         name: "Costa Rica Las Lajas",
         image: single_origin9,
@@ -200,6 +215,7 @@ let coffee_products = [
 
     {
         id: 16,
+        quantity: 0,
         roaster: "Oynx Coffee Lab",
         name: "Colombia Aponte Village",
         image: single_origin10,

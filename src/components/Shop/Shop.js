@@ -24,6 +24,7 @@ const Shop = (props) => {
         />
     ))
 
+
     return (
         <div className="shop-wrapper"> 
 

@@ -1,17 +1,18 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
+
 const Cart = (props) => {
 
-    let products_total = 0;
-    console.log(typeof(products_total));
+    let item_count = props.item_count;
 
-    // Parse cart prop to render cart contents.
+    console.log(item_count);
+
+    // Parse cart prop to render cart contents as JSX.
     function cartContents() {
-        
         let cart_contents;
     
-        if (props.cart.length === 0) {
+        if (item_count === 0) {
             cart_contents = <div className="empty-cart">
                                 <p> You have no items in your shopping cart.</p>
                                 <p> Click <Link to="/shopping">here</Link> to continue shopping. </p>
@@ -25,38 +26,35 @@ const Cart = (props) => {
         return cart_contents;
     }
 
-    // Create cart cards for display.
+    // Create cart card JSX for display.
     function cartCard(item) {
-        const { id, img, roaster, name, price} = item;
+    
+        const { quantity, id, img, roaster, name, price } = item;
+        let cart_contents;
 
-        let cart_contents = 
+        if (quantity !== 0) {
 
-        <div key={id} className="cart-card">
-            <p> { img } </p>
-            <p> { roaster }</p>
-            <p> { name }</p>
-            <p> {"$" + price } </p>
-        </div>
+            cart_contents = 
+
+            <div key={id} className="cart-card">
+                <p> { img } </p>
+                <p> { roaster }</p>
+                <p> { name }</p>
+                <p> {"$" + price } </p>
+                <p> { quantity } </p>
+            </div>
+        }
+        
 
         return cart_contents;
     }
 
-    // Calculate required data for the order summary cart section.
-    function productsTotal() {
-        
-        for (let i = 0; i < props.cart.length; i++) {
-            console.log(typeof(props.cart[i].price));
-            products_total += props.cart[i].price;
-        }
 
-        return products_total;
-    }
- 
     // Return JSX for order summary section.
     function orderSummary() {
         let order_summary;
         let shipping_banner;
-        let products_total = productsTotal(props);
+        let products_total = item_count;
         let tax_total = Math.round(products_total * .03 * 100) / 100;
         let shipping_total = (products_total >= 50) ? 0 : 6;
         let order_total = Math.round((products_total + tax_total + shipping_total) * 100) / 100;
@@ -67,31 +65,33 @@ const Cart = (props) => {
             shipping_banner = "Your order ships for FREE!";
         }
 
-        if (props.cart.length > 0) {
+        if (item_count > 0) {
             order_summary = <div className="order-summary">
 
                 <p> {shipping_banner} </p>
 
                 <table>
-                    <tr>
-                        <td>Subtotal</td>
-                        <td>{products_total}</td>
-                    </tr>
+                    <tbody>
+                        <tr>
+                            <td>Subtotal</td>
+                            <td>{products_total}</td>
+                        </tr>
 
-                    <tr>
-                        <td>Tax</td>
-                        <td>{tax_total}</td>
-                    </tr>
+                        <tr>
+                            <td>Tax</td>
+                            <td>{tax_total}</td>
+                        </tr>
 
-                    <tr>
-                        <td>Shipping</td>
-                        <td>{shipping_total}</td>
-                    </tr>
+                        <tr>
+                            <td>Shipping</td>
+                            <td>{shipping_total}</td>
+                        </tr>
 
-                    <tr>
-                        <td>Order Total</td>
-                        <td>{order_total}</td>
-                    </tr>
+                        <tr>
+                            <td>Order Total</td>
+                            <td>{order_total}</td>
+                        </tr>
+                    </tbody>
                 </table>
             </div>
         }

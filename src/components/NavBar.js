@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const NavBar = (props) => {
 
-    let cart_item_count = props.cart.length;
+    let cart_item_count = props.item_count;
 
     return (
         <div className="nav-bar">
