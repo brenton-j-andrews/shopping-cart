@@ -4,6 +4,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom"
 // Component and CSS imports.
 import NavBar from "./components/NavBar";
 import Homepage from "./components/Homepage"
+import Footer from "./components/Footer";
 import Shop from "./components/Shop/Shop"
 import Cart from "./components/Cart/Cart";
 import coffee_products from "./products/products";
@@ -91,6 +92,7 @@ class App extends React.Component {
             <Route path="/shopping" element = { <Shop addToCart = {this.addToCart} /> }></Route>
             <Route path="/cart" element = { <Cart cart = {this.state.cart} item_count = {this.state.item_count} removeFromCart = {this.removeFromCart } incrementCartItem = {this.incrementCartItem} />}></Route> 
           </Routes>
+          <Footer />
         </BrowserRouter>
       </div>
     )

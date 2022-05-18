@@ -27,7 +27,7 @@ const Cart = (props) => {
     // Create cart card JSX for display.
     function cartCard(item) {
     
-        const { quantity, id, img, roaster, name, price } = item;
+        const { quantity, id, roaster, name, price } = item;
         let cart_contents;
 
         if (quantity !== 0) {
@@ -35,21 +35,25 @@ const Cart = (props) => {
             cart_contents = 
 
             <div key={id} className="cart-card">
+
+                <img className="cart-card-image" src={item.image} alt="Coffee"></img>
+
                 <div className="cart-card-left">
-                    <p> { img } </p>
                     <p> { roaster }</p>
                     <p> { name }</p>
-                    <p> {"$" + price } </p>
+                    <button className="remove_btn" onClick={() => props.removeFromCart(id)}> Remove </button>
                 </div>
                 
                 <div className="cart-card-quantity">
-                    <button className="remove_btn" onClick={() => props.incrementCartItem(id, "-")}> - </button>
-                    <p> { quantity } </p>
-                    <button className="remove_btn" onClick={() => props.incrementCartItem(id, "+")}> + </button>
+                    <p> QTY </p>
+                    <div className="quantity-child">
+                        <button className="inc_btn" onClick={() => props.incrementCartItem(id, "-")}> - </button>
+                        <p className="quantity-item"> { quantity } </p>
+                        <button className="inc_btn" onClick={() => props.incrementCartItem(id, "+")}> + </button>
+                    </div>
                 </div>
-                
-                <button className="remove_btn" onClick={() => props.removeFromCart(id)}> Remove </button>
-                
+
+                <p className="cart-card-price"> {"$" + price } </p>
 
             </div>
         }
@@ -90,31 +94,33 @@ const Cart = (props) => {
         if (item_count > 0) {
             order_summary = <div className="order-summary">
 
-                <p> {shipping_banner} </p>
+                <p className="shipping-banner"> {shipping_banner} </p>
 
-                <table>
+                <table className="checkout-table">
                     <tbody>
-                        <tr>
-                            <td>Subtotal</td>
-                            <td>${products_total}</td>
+                        <tr className="checkout-row">
+                            <td className="checkout-title">Subtotal</td>
+                            <td className="checkout-num">${products_total}</td>
                         </tr>
 
                         <tr>
-                            <td>Tax</td>
-                            <td>${tax_total}</td>
+                            <td className="checkout-title">Tax</td>
+                            <td className="checkout-num">${tax_total}</td>
                         </tr>
 
                         <tr>
-                            <td>Shipping</td>
-                            <td>{shipping_total}</td>
+                            <td className="checkout-title">Shipping</td>
+                            <td className="checkout-num">${shipping_total}</td>
                         </tr>
 
-                        <tr>
-                            <td>Order Total</td>
-                            <td>${order_total}</td>
+                        <tr className="order-total">
+                            <td className="checkout-title">Order Total</td>
+                            <td className="checkout-num">${order_total}</td>
                         </tr>
                     </tbody>
                 </table>
+
+                <button> CHECKOUT </button>
             </div>
         }
 
