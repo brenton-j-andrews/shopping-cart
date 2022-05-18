@@ -48,7 +48,7 @@ const Footer = (props) => {
             </div>
             
             <div className="footer-lower">
-                <p>Site Design and Contents Inspired by <a href="https://www.seattlecoffeegear.com/">Seattle Coffee Gear</a></p>
+                <p>Site design, contents and icons inspired and sourced from <a href="https://www.seattlecoffeegear.com/">Seattle Coffee Gear</a>.</p>
                 <p> Copyright 2022 - Brenton Andrews - <a href="https://github.com/brenton-j-andrews/shopping-cart">GitHub</a></p>
             </div>
             

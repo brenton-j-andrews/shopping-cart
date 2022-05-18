@@ -19,12 +19,12 @@ const NavBar = (props) => {
                 <div className="nav-bar-header-left">
                     <Link className="nav-bar-link" to="/"> Home </Link>
                     <Link className="nav-bar-link" to="/shopping"> Shop Coffee </Link>
-                    <Link className="nav-bar-link" to="/"> Shop Gear </Link>
+                    <Link className="nav-bar-link" to="/dummy"> Shop Gear </Link>
                 </div>
 
                 <div className="nav-bar-header-right">
-                    <Link className="nav-bar-link" to="/account"> Account </Link>
-                    <Link className="nav-bar-link" to="/service"> Help </Link>
+                    <Link className="nav-bar-link" to="/dummy"> Account </Link>
+                    <Link className="nav-bar-link" to="/dummy"> Help </Link>
                     <Link className="nav-bar-link" to="/cart"> {`Cart ${cart_item_count}`} </Link>
                 </div>
             </header>
