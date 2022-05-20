@@ -1,0 +1,30 @@
+{
+  "files": {
+    "main.css": "/shopping-cart/static/css/main.e5446cd2.css",
+    "main.js": "/shopping-cart/static/js/main.71979f21.js",
+    "static/media/hero_img.jpg": "/shopping-cart/static/media/hero_img.c9693be7008d91d603f7.jpg",
+    "static/media/single_origin7.png": "/shopping-cart/static/media/single_origin7.70727d0f7dffb651b131.png",
+    "static/media/single_origin10.png": "/shopping-cart/static/media/single_origin10.6433f29d802b7ab40de5.png",
+    "static/media/single_origin8.png": "/shopping-cart/static/media/single_origin8.70502e8be1a5e0912043.png",
+    "static/media/espresso4.jpg": "/shopping-cart/static/media/espresso4.10254e6a05699fab7d84.jpg",
+    "static/media/single_origin9.jpg": "/shopping-cart/static/media/single_origin9.b08d17169ecdd9d42c4a.jpg",
+    "static/media/Aladin-Regular.ttf": "/shopping-cart/static/media/Aladin-Regular.48ba849213303a8ed0d4.ttf",
+    "static/media/single_origin5.jpg": "/shopping-cart/static/media/single_origin5.ef775d4b18f02eb20703.jpg",
+    "static/media/single_origin4.jpg": "/shopping-cart/static/media/single_origin4.489afa40432487f74c1d.jpg",
+    "static/media/single_origin6.jpg": "/shopping-cart/static/media/single_origin6.103e357a019038448876.jpg",
+    "static/media/espresso6.jpg": "/shopping-cart/static/media/espresso6.37b63e22d8050fa80b8e.jpg",
+    "static/media/category-accessories.svg": "/shopping-cart/static/media/category-accessories.b155e3a7bf669680a66ff92f7df914d0.svg",
+    "static/media/category-coffee-beans.svg": "/shopping-cart/static/media/category-coffee-beans.dac88cc432ce08625e3b870458a8f3a5.svg",
+    "static/media/category-espresso-machines.svg": "/shopping-cart/static/media/category-espresso-machines.1aa16a0258030fca2d7fa6439f5256fb.svg",
+    "static/media/category-superautomatics.svg": "/shopping-cart/static/media/category-superautomatics.ac150ce6ed532d11ebbe6a30e9342f2e.svg",
+    "static/media/category-grinders.svg": "/shopping-cart/static/media/category-grinders.835a0f28b188accecaf5511b29f05c6d.svg",
+    "static/media/category-coffee-makers.svg": "/shopping-cart/static/media/category-coffee-makers.b0447f0851603f271bef7db102272c2b.svg",
+    "index.html": "/shopping-cart/index.html",
+    "main.e5446cd2.css.map": "/shopping-cart/static/css/main.e5446cd2.css.map",
+    "main.71979f21.js.map": "/shopping-cart/static/js/main.71979f21.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e5446cd2.css",
+    "static/js/main.71979f21.js"
+  ]
+}
