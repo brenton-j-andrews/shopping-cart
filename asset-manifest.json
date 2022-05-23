@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/shopping-cart/static/css/main.e5446cd2.css",
-    "main.js": "/shopping-cart/static/js/main.71979f21.js",
+    "main.js": "/shopping-cart/static/js/main.4ce43f16.js",
     "static/media/hero_img.jpg": "/shopping-cart/static/media/hero_img.c9693be7008d91d603f7.jpg",
     "static/media/single_origin7.png": "/shopping-cart/static/media/single_origin7.70727d0f7dffb651b131.png",
     "static/media/single_origin10.png": "/shopping-cart/static/media/single_origin10.6433f29d802b7ab40de5.png",
@@ -21,10 +21,10 @@
     "static/media/category-coffee-makers.svg": "/shopping-cart/static/media/category-coffee-makers.b0447f0851603f271bef7db102272c2b.svg",
     "index.html": "/shopping-cart/index.html",
     "main.e5446cd2.css.map": "/shopping-cart/static/css/main.e5446cd2.css.map",
-    "main.71979f21.js.map": "/shopping-cart/static/js/main.71979f21.js.map"
+    "main.4ce43f16.js.map": "/shopping-cart/static/js/main.4ce43f16.js.map"
   },
   "entrypoints": [
     "static/css/main.e5446cd2.css",
-    "static/js/main.71979f21.js"
+    "static/js/main.4ce43f16.js"
   ]
 }
