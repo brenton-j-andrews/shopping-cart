@@ -86,10 +86,10 @@ class App extends React.Component {
     
     return (
       <div className="App">
-        <BrowserRouter>
+        <BrowserRouter basename="/shopping-cart">
           <NavBar item_count = { this.state.item_count }/>
           <Routes>
-            <Route path="/" element= { <Homepage /> }></Route>
+            <Route path="/home" element= { <Homepage /> }></Route>
             <Route path="/shopping" element = { <Shop addToCart = {this.addToCart} /> }></Route>
             <Route path="/cart" element = { <Cart cart = {this.state.cart} item_count = {this.state.item_count} removeFromCart = {this.removeFromCart } incrementCartItem = {this.incrementCartItem} />}></Route> 
             <Route path="/dummy" element = { <Blank /> }> </Route>
