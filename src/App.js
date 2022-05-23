@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom"
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 
 // Component and CSS imports.
 import NavBar from "./components/NavBar";
@@ -89,6 +89,7 @@ class App extends React.Component {
         <BrowserRouter basename="/shopping-cart">
           <NavBar item_count = { this.state.item_count }/>
           <Routes>
+            <Route path="/" element={<Navigate replace to="/home" />} />
             <Route path="/home" element= { <Homepage /> }></Route>
             <Route path="/shopping" element = { <Shop addToCart = {this.addToCart} /> }></Route>
             <Route path="/cart" element = { <Cart cart = {this.state.cart} item_count = {this.state.item_count} removeFromCart = {this.removeFromCart } incrementCartItem = {this.incrementCartItem} />}></Route> 
